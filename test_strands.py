@@ -25,7 +25,7 @@ print("✅ OpenAI API key found")
 
 # Test creating a model and agent
 try:
-    model = OpenAIModel(api_key=api_key, model_id="gpt-3.5-turbo")
+    model = OpenAIModel(api_key=api_key, model_id="gpt-4o")
     print("✅ OpenAI model created")
     
     agent = Agent(

@@ -29,10 +29,12 @@ class BaseAgent(ABC):
         
         # Initialize Strands Agent with OpenAI model
         if Config.OPENAI_API_KEY:
-            model_name = kwargs.get('model', 'gpt-3.5-turbo')
+            model_name = kwargs.get('model', Config.DEFAULT_MODEL)
             self.model = OpenAIModel(
                 api_key=Config.OPENAI_API_KEY,
-                model_id=model_name
+                model_id=model_name,
+                temperature=kwargs.get('temperature', Config.DEFAULT_TEMPERATURE),
+                max_tokens=kwargs.get('max_tokens', Config.DEFAULT_MAX_TOKENS)
             )
             self.agent = Agent(
                 model=self.model,

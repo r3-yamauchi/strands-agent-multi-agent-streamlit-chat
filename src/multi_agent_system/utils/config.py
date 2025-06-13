@@ -12,9 +12,9 @@ class Config:
     """Configuration class for the multi-agent system."""
     
     # Model configuration
-    DEFAULT_MODEL: str = os.getenv("DEFAULT_MODEL", "gpt-3.5-turbo")
+    DEFAULT_MODEL: str = os.getenv("DEFAULT_MODEL", "gpt-4o")
     DEFAULT_TEMPERATURE: float = float(os.getenv("DEFAULT_TEMPERATURE", "0.7"))
-    DEFAULT_MAX_TOKENS: int = int(os.getenv("DEFAULT_MAX_TOKENS", "1000"))
+    DEFAULT_MAX_TOKENS: int = int(os.getenv("DEFAULT_MAX_TOKENS", "16384"))
     
     # Language configuration
     DEFAULT_LANGUAGE: str = os.getenv("DEFAULT_LANGUAGE", "ja")  # 日本語をデフォルトに設定
